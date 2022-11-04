@@ -1,3 +1,6 @@
+function moeda (atual)  {
+return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
 function total(){
     let c = document.getElementById("capital").value;
     let j = document.getElementById("juros").value;
@@ -21,12 +24,15 @@ function total(){
       return
     }
     let r = 0;
+    let texto = "";
     for(let i = 1; i <= t; i++){
-        r = c * (1 + (j/100));
+        m = c * (1 + (j/100));
+        texto += i + ": " + moeda(m) + "<br>";
         //document.write("Mês " + i + " valor: " + r +"<br>");
-        c = r;
+        c = m;
     }
-    document.getElementById("total").innerHTML = r;
+    document.getElementById("listaMes").innerHTML = texto;
+    document.getElementById("total").innerHTML = moeda (m);
     //document.write("Resultado: " + r);
 }
   
@@ -63,7 +69,7 @@ function total(){
           let c = 100
           let p = Number(val2)  / Number(c)
           let r = Number(val1) * Number(p);
-          document.getElementById("resultado").innerHTML =r;
+          document.getElementById("resultado").innerHTML = r;
           }
     
 
