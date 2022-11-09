@@ -13,30 +13,42 @@
 <body>
   <input type="checkbox" id="input-calcFin">
   <div class="calc">
-    <div id="spTotal">
-      <span id="total"> R$ 0,00</span>
+    <label for="input-calcFin">
+      <h3>Financeira</h3>
+    </label>
+    <div class="calcF">
+      <div id="spTotal">
+        <span id="total"> R$ 0,00</span>
+      </div>
+      Capital: <input id="capital" placeholder="R$ ??" type=" text "><br>
+      Juros mensais: <input id="juros" placeholder="% ??" type=" text "><br>
+      Quantidade de meses: <input id="meses" placeholder="Tempo ??" type=" text "><br>
+      <button onclick=" total ()"> Calcular </button>
+      <div id="spLista">
+        <span id="listaMes"></span>
+      </div>
     </div>
-    Capital: <input id="capital" placeholder= "R$ ??" type=" text "><br>
-    Juros mensais: <input id="juros" placeholder= "% ??" type=" text "><br>
-    Quantidade de meses: <input id="meses" placeholder= "Tempo ??" type=" text "><br>
-    <button onclick=" total ()"> Calcular </button>
-    <div id="spLista">
-      <span id="listaMes"></span>
-    </div>
-  </div>
-  <br><br><br>
-  <span id="resultado"></span><br><br>
-  valor 1: <input id="v1" type="text"><br>
-  valor 2: <input id="v2" type="text"><br>
-  <button onclick="adicao()">Soma</button>
+   </div>
 
-  <button onclick="subtracao()">Subtração</button>
+      <input type="checkbox" id="input-calcESG">
+      <div class="calcEq">
+        <label for="input-calcESG">
+          <h3>Equação<br>Segundo Grau</h3>
+        </label>
+        <div class="calcF">
+          <div id="spRaiz">
+            <span id="raiz"> x1:? e x2:?</span>
+          </div>
+          a: <input id="a" placeholder="a" type=" text "><br>
+          b: <input id="b" placeholder="b" type=" text "><br>
+          c: <input id="c" placeholder="c" type=" text "><br>
+          <button onclick="calculaRaiz ()"> Calcular </button>
 
-  <button onclick="divisao()">Divisão</button>
+        </div>
+      </div>
 
-  <button onclick="multiplicacao()">Multiplicação</button>
+    
 
-  <button onclick="porcentagem()">Porcentagem</button>
+    </body>
 
-</body>
-</ html>
+</html>
