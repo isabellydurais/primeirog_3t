@@ -43,6 +43,15 @@ margin-bottom: 10px;
     border-width: 1px;
     border-radius: 4px;
     background: rgb(199, 120, 252);
-    color: rgb(110, 3, 250);
+    color: rgb(110, 3, 250); 
     margin-top: 10px;
+}
+.calcF {
+    display: none;
+}
+#input-calcFin {
+    display: none;
+}
+#input-calcFin:checked + .calc .calcF {
+    display: block;
 }
