@@ -14,8 +14,8 @@
     padding: 5px;
 }
 .calc input:focus {
-    background:blueviolet
-    color: blue
+    background:blueviolet;
+    color: blue;
 }
 #spTotal {
 background: rgb(170, 123, 218);
